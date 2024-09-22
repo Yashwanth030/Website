@@ -1,0 +1,172 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+img{
+    width: 220px;
+    height: 150px;
+    padding: 30px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #222;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 1rem;
+    border-bottom: 2px solid white;
+}
+
+nav .logo h1 {
+    color: white;
+    margin: 0;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav .nav-links li {
+    display: inline-block;
+}
+
+nav .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    border: 2px solid white;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav .nav-links a:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Home Section */
+#home {
+    background: linear-gradient(to right, #ffffff, #77daf8);
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(1, 4, 110);
+}
+
+.home-content {
+    text-align: center;
+    color:rgb(0, 0, 0);
+}
+   
+#main{
+    width: 200px;
+    height: 200px;
+    padding-left: 30px;
+}
+#home h2 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+#home p {
+    font-size: 1.5rem;
+}
+
+/* About Section */
+#about {
+    padding: 50px 20px;
+    background-color: #02b6ed;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.about-content p{
+    color:ghostwhite;
+}
+
+/* Events Section */
+#events {
+    background-color: #ffffff;
+    color: white;
+    padding: 50px 20px;
+}
+
+.event-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: #333;
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    color: #50d3d3;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 20px;
+    background-color: #000000;
+}
+
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-content a {
+    color: #37bebe;
+    text-decoration: none;
+}
+.contact-content p,h2{
+    color: rgb(0, 0, 0);
+}
+
+.contact-content a:hover {
+    text-decoration: underline;
+}
+#cl{
+    color: white;
+    text-align: center;
+}
+
