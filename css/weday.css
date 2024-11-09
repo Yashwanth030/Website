@@ -1,0 +1,149 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #333;
+    padding: 15px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav .back-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 15px;
+    background-color: #0056b3;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav .back-link:hover {
+    background-color: #003d80;
+}
+
+/* Event Page Section */
+.event-page {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Event Heading */
+.event-name {
+    font-size: 32px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #160053;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInText 0.5s forwards 0.6s; /* Event heading fade-in */
+}
+
+/* Event Description */
+
+
+/* Event Image Container */
+.event-image-container {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInImage 0.5s forwards 1s; /* Image fade-in */
+}
+
+.event-image {
+    width: 50%; /* Adjust image size to 50% of the container */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+
+/* Fade-in Keyframes for Text and Image */
+@keyframes fadeInText {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInImage {
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .event-page {
+        padding: 15px;
+        margin: 20px;
+    }
+
+    .event-name {
+        font-size: 28px;
+    }
+
+    .event-description {
+        font-size: 16px;
+    }
+
+    .event-date {
+        font-size: 14px;
+    }
+
+    .event-image {
+        width: 70%; /* Adjust image size for smaller screens */
+    }
+}
+.event-image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.event-image-container img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+.event-image-container img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    transition: transform 0.2s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.event-image-container img:hover {
+    transform: translateY(-10px) scale(1.05); /* Moves the image up and slightly enlarges it */
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3); /* Adds shadow for a lifted effect */
+}
+.event-page h2 {
+    animation: fadeIn 0.3s ease forwards;
+    opacity: 0;
+}
+
+.event-page p {
+    animation: fadeIn 0.6s ease forwards;
+    animation-delay: 0.7s;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Week</title>
+    <link rel="stylesheet" href="css/eweek.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #062952; /* Dark blue background */
+            color: rgb(0, 0, 0);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            text-align: center;
+            padding: 50px;
+        }
+        h2 {
+    font-size: 3em;
+    margin-bottom: 30px;
+    color: #000a57; /* Light blue for contrast */
+    font-family: 'Arial', sans-serif; /* You can change this to any font you like */
+    
+}
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 70px;
+        }
+       
+    </style>
+
+</head>
+<body>
+    <nav>
+        <div class="logo">E-Week</div>
+        <a href="index.html" class="back-link">Back to Events</a>
+    </nav>
+
+    <section class="event-page">
+        <h2 class="event-name">E-Week</h2>
+        <p>E-Week is designed to equip students with practical skills and real-world 
+            experience across various professional fields.</p>
+        <div class="event-image-container">
+                <div>
+                 <img src="img/A.jpg" alt="Image 1">
+                </div>
+        </div>
+        <section class="event-page1">
+            <div class="event-list-container1">
+                <div style="text-align: center;"><p>Events conducted in E-Week </p></div>
+                <div class="event-item">
+                    <p>The Legal Showdown</p>
+                </div>
+                <div class="event-item">
+                    <p>Stock Market Session</p>
+                </div>
+                <div class="event-item">
+                    <p>7<sup>th</sup> Minute</p>
+                </div>
+                <div class="event-item">
+                    <p>The Corporate Wars</p>
+                </div>
+                <div class="event-item">
+                    <p>Idea to Enterprise</p>
+                </div>
+            </div>
+        </section>
+        
+        
+    </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible"); // Adds 'visible' class
+                observer.unobserve(entry.target); // Stop observing once visible
+            }
+        });
+    }, { threshold: 0.2 }); // Adjust threshold as needed
+
+    document.querySelectorAll(".event-item").forEach(item => {
+        observer.observe(item); // Observe each event item
+    });
+});
+
+    </script>
+</body>
+</html>
+

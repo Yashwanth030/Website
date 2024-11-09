@@ -1,0 +1,487 @@
+html {
+    height: 100%; /* Ensure the body and html take up the full height */
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+#home, #about, #events, #contact {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+}
+
+h2 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    cursor: url('path/to/cursor-image.png'), auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation Bar Styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    z-index: 10;
+    transition: background-color 0.3s; /* Transition effect for background */
+}
+
+nav:hover {
+    background-color: rgba(51, 51, 51, 0.7); /* Darker on hover */
+}
+
+nav .logo img {
+    height: 60px; /* Adjust logo height to make the nav bar shorter */
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+nav .nav-links li {
+    margin: 0 15px;
+}
+
+nav .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px; /* Font size for a compact look */
+    border: 2px solid transparent; /* Border for hover effect */
+    transition: border-color 0.3s;
+}
+
+nav .nav-links a:hover {
+    border-color: white; /* White border on hover */
+}
+
+/* Background Layer Effects */
+.background {
+    background: linear-gradient(135deg, #5d72e6, #020468);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.parallax-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(58, 0, 102, 0.6), transparent);
+    animation: rotate 20s linear infinite;
+}
+
+.floating-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('bg.jpg') repeat;
+    opacity: 0.15;
+    animation: float 10s infinite;
+}
+
+/* Section Styling */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#home {
+    background: transparent;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home img {
+    width: 200px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.home-content h2 {
+    margin-top: 20px;
+    font-size: 36px;
+    animation: slideIn 2s ease-in-out;
+}
+
+/* Keyframes */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Home Section */
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.home-container {
+    display: flex;
+    width: 100%;
+    max-width: auto;
+    margin: auto;
+}
+
+.logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.logo-container img {
+    width: 80%;
+    max-width: 200px;
+    animation: logoMovement 2s infinite alternate;
+}
+
+@keyframes logoMovement {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+.content-container {
+    flex: 1.5;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgba(255, 255, 255, 0.995);
+    border-radius: 8px;
+    padding: 20px;
+    margin-right: 80px; /* Move the container slightly to the left */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    width: 100%;
+    max-width: 500px; /* You can adjust the max-width to your preferred value */
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .content-container {
+        width: 90%; /* On smaller screens, take up 90% of the width */
+        max-width: 100%;
+    }
+}
+
+/* About Section */
+.about-content {
+    max-width: 800px;
+    margin: auto;
+    background-color: white;  /* Set container background to white */
+    border: 2px solid #0056b3; /* Dark blue border */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Slightly more shadow for popup effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.about-content:hover {
+    transform: translateY(-10px); /* Move the container up slightly */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4); /* Stronger shadow when hovered */
+}
+
+h2 {
+    color: #003366;  /* Dark blue color for headings */
+    font-size: 24px;  /* Adjust heading font size */
+    margin-bottom: 10px;
+}
+
+p {
+    color: #333;  /* Black text color for paragraphs */
+    font-size: 16px;  /* Font size for paragraphs */
+    line-height: 1.6;
+    margin-bottom: 15px;
+    animation: slideIn 0.5s ease forwards;
+    opacity: 0;
+}
+
+/* Keyframes for sliding animation */
+@keyframes slideIn {
+    0% { transform: translateX(-20px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+.about-content h2,
+.about-content p {
+    animation-delay: 0.2s; /* Delay for the animation effect */
+}
+
+/* Adjust delay for each section of content */
+.about-content h2:nth-of-type(2),
+.about-content p:nth-of-type(2) {
+    animation-delay: 0.4s;
+}
+
+.about-content h2:nth-of-type(3),
+.about-content p:nth-of-type(3) {
+    animation-delay: 0.6s;
+}
+
+.about-content h2:nth-of-type(4),
+.about-content p.tagline {
+    animation-delay: 0.8s;
+}
+
+.about-content h2:nth-of-type(5) {
+    animation-delay: 1.0s;
+}
+
+/* Events Section */
+#events {
+    padding: 40px;
+    text-align: center;
+}
+
+.event-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.event-card {
+    border: 2px solid #0056b3;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.5s ease forwards;
+    opacity: 0;
+}
+
+.event-card:hover {
+    background-color: #0056b3;
+    color: rgb(0, 200, 255);
+    transform: translateY(-10px);
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* Individual card animation delay */
+.event-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.event-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.event-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .event-cards {
+        flex-direction: column;
+    }
+
+    nav .nav-links li {
+        margin: 0 10px;
+    }
+
+    nav .nav-links a {
+        font-size: 14px;
+    }
+}
+
+/* Hover Effects for Event Cards */
+.event-card:hover {
+    background: #f0f0f0;
+    transform: translateY(-5px);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.zoom {
+    animation: zoomIn 0.5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+/* For the logo on the home page to pop up */
+.home-container .logo-container img {
+    width: 80%;
+    max-width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-container .logo-container img:hover {
+    transform: scale(1.2);  /* This will make the logo grow when hovered */
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2); /* Add a shadow for effect */
+}
+
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #333;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Events Section */
+.event-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.event-card {
+    width: 250px;
+    padding: 10px;
+    border: 2px solid #0056b3;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #333;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Event Page Styling */
+.event-page {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.event-image {
+    width: 80%;
+    border-radius: 8px;
+    animation: slideIn 1.5s ease;
+}
+
+h2 {
+    font-size: 36px;
+    color: #0056b3;
+    margin: 20px 0;
+}
+
+@keyframes slideIn {
+    0% { transform: translateY(30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+.back-link {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.back-link:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+
+
+
